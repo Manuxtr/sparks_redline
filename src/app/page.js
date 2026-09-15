@@ -1,69 +1,111 @@
 import Image from "next/image";
 
+const services = [
+  ["01", "Deep diagnostics", "Find the real fault before it becomes an expensive one."],
+  ["02", "Performance tuning", "Sharper response, smarter power, and a drive that feels alive."],
+  ["03", "Engine & transmission", "Precision repairs for the systems that move everything forward."],
+  ["04", "Suspension & exhaust", "Better control, better sound, and confidence through every corner."],
+];
+
+const youtubeVideos = [
+  { id: "W4N4HKeOv2I", title: "2013 Chevrolet Spark review", label: "Workshop feature" },
+  { id: "W4N4HKeOv2I", title: "What your warning light means", label: "Driver guide" },
+];
+
 export default function Home() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert h-5 w-[100px]"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the{" "}
-            <code className="rounded bg-black/[.06] px-1.5 py-0.5 font-mono text-[0.9em] dark:bg-white/[.08]">
-              page.js
-            </code>{" "}
-            file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
+    <main>
+      <section className="hero shell" id="top">
+        <div className="hero-copy">
+          <p className="eyebrow"><span /> Abuja&apos;s performance garage</p>
+          <h1>Make every<br /><em>drive count.</em></h1>
+          <p className="hero-intro">Precision maintenance, honest diagnostics, and performance work for drivers who expect more from their cars.</p>
+          <div className="hero-actions">
+            <a className="button button-primary" href="https://wa.me/2347047458909" target="_blank" rel="noreferrer">Book a service <span>↗</span></a>
+            <a className="text-link" href="#services">See what we do <span>↓</span></a>
+          </div>
+          <div className="hero-meta">
+            <div><strong>01</strong><span>Performance-led<br />technical care</span></div>
+            <div><strong>02</strong><span>Clear answers<br />before any work</span></div>
+          </div>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert h-[14px] w-4"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={14}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+        <div className="hero-art">
+          <Image src="/rdbg.jpeg" alt="Spark's Redline Performance garage and sports car" fill priority sizes="(max-width: 800px) 100vw, 55vw" />
+          <div className="art-label"><span>01</span> / Redline<br />standard</div>
         </div>
-      </main>
-    </div>
+      </section>
+
+      <section className="trust-bar" id="standard">
+        <div className="shell trust-grid">
+          <p className="trust-lead">Why drivers<br /><strong>come back</strong></p>
+          <div><span className="trust-icon">01</span><p><b>Precision</b><br />Every diagnosis is earned.</p></div>
+          <div><span className="trust-icon">02</span><p><b>Performance</b><br />Built for how you drive.</p></div>
+          <div><span className="trust-icon">03</span><p><b>Honesty</b><br />Clear work. Clear pricing.</p></div>
+        </div>
+      </section>
+
+      <section className="services shell" id="services">
+        <div className="section-heading">
+          <p className="eyebrow"><span /> The work</p>
+          <h2>More from<br /><em>your car.</em></h2>
+          <p>From routine maintenance to serious performance work, we find what is holding your car back and get it moving right.</p>
+          <a className="text-link" href="/auth/services">View all services <span>↗</span></a>
+        </div>
+        <div className="service-list">
+          {services.map(([number, title, description]) => (
+            <article className="service-item" key={title}>
+              <span className="service-number">{number}</span>
+              <div><h3>{title}</h3><p>{description}</p></div>
+              <span className="service-arrow">↗</span>
+            </article>
+          ))}
+        </div>
+      </section>
+
+      <section className="video-section shell" id="videos">
+        <div className="video-heading">
+          <div>
+            <p className="eyebrow"><span /> From the garage</p>
+            <h2>Watch the<br /><em>redline.</em></h2>
+          </div>
+          <p>Practical car advice, workshop stories, and a closer look at how we keep Abuja moving.</p>
+        </div>
+        <div className="video-grid">
+          {youtubeVideos.map((video) => (
+            <article className="video-card" key={video.title}>
+              {video.id ? (
+                <iframe
+                  src={`https://www.youtube-nocookie.com/embed/${video.id}`}
+                  title={video.title}
+                  loading="lazy"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  allowFullScreen
+                />
+              ) : (
+                <div className="video-placeholder">
+                  <span>YT</span>
+                  <p>Add a YouTube video ID here</p>
+                </div>
+              )}
+              <div className="video-card-meta">
+                <span>{video.label}</span>
+                <h3>{video.title}</h3>
+              </div>
+            </article>
+          ))}
+        </div>
+      </section>
+
+      <section className="offer shell" id="booking">
+        <div className="offer-image"><Image src="/rdflyer.jpeg" alt="Spark's Redline service and diagnostic offering" fill sizes="(max-width: 800px) 100vw, 45vw" /></div>
+        <div className="offer-copy">
+          <p className="eyebrow"><span /> Start with certainty</p>
+          <h2>Know what&apos;s<br /><em>under the hood.</em></h2>
+          <p>Small service, big peace of mind. We scan, inspect, and explain what your car needs next, before a warning light becomes a roadside story.</p>
+          <a className="button button-light" href="https://wa.me/2347047458909" target="_blank" rel="noreferrer">Talk to the team <span>↗</span></a>
+        </div>
+      </section>
+
+    </main>
   );
 }
