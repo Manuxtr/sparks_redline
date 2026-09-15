@@ -10,6 +10,7 @@ a { color: inherit; text-decoration: none; }
 .brand { align-items: center; display: flex; font-size: 11px; font-weight: 700; letter-spacing: .18em; line-height: 1.35; }
 .brand img { border-radius: 50%; height: 48px; margin-right: 13px; object-fit: cover; width: 48px; }
 .brand b, em { color: var(--red); font-style: normal; }
+.brand small { color: #85827c; font-size: 9px; font-weight: 400; letter-spacing: .12em; text-transform: lowercase; }
 .nav-links { display: flex; gap: 34px; color: #a3a19d; font-size: 12px; letter-spacing: .08em; text-transform: uppercase; }
 .nav-links a { transition: color .2s ease; }
 .nav-links a:hover, .nav-links a.active, .text-link:hover { color: var(--paper); }
@@ -58,8 +59,8 @@ h1, h2 { font-size: clamp(50px, 7vw, 94px); letter-spacing: -.06em; line-height:
 .service-number { color: var(--red); font-size: 11px; letter-spacing: .1em; }
 .service-item h3 { font-size: 22px; font-weight: 500; letter-spacing: -.02em; margin: 0 0 8px; text-transform: uppercase; }
 .service-item p { color: #77756f; font-size: 13px; line-height: 1.5; margin: 0; }
-.service-arrow { color: var(--red); font-size: 24px; text-align: right; transition: transform .2s ease; }
-.service-item:hover .service-arrow { transform: translate(4px, -4px); }
+.service-icon { color: var(--red); font-size: 24px !important; justify-self: end; transition: transform .2s ease; }
+.service-item:hover .service-icon { transform: translateY(-3px); }
 .video-section { border-top: 1px solid #383633; padding-bottom: 140px; padding-top: 100px; }
 .video-heading { align-items: end; display: flex; justify-content: space-between; margin-bottom: 48px; }
 .video-heading h2 { font-size: clamp(42px, 5.7vw, 76px); }

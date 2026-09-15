@@ -1,10 +1,11 @@
 import Image from "next/image";
+import { Build, DirectionsCar, Engineering, Speed } from "@mui/icons-material";
 
 const services = [
-  ["01", "Deep diagnostics", "Find the real fault before it becomes an expensive one."],
-  ["02", "Performance tuning", "Sharper response, smarter power, and a drive that feels alive."],
-  ["03", "Engine & transmission", "Precision repairs for the systems that move everything forward."],
-  ["04", "Suspension & exhaust", "Better control, better sound, and confidence through every corner."],
+  ["01", "Deep diagnostics", "Find the real fault before it becomes an expensive one.", Engineering],
+  ["02", "Performance tuning", "Sharper response, smarter power, and a drive that feels alive.", Speed],
+  ["03", "Engine & transmission", "Precision repairs for the systems that move everything forward.", Build],
+  ["04", "Suspension & exhaust", "Better control, better sound, and confidence through every corner.", DirectionsCar],
 ];
 
 const youtubeVideos = [
@@ -21,8 +22,8 @@ export default function Home() {
           <h1>Make every<br /><em>drive count.</em></h1>
           <p className="hero-intro">Precision maintenance, honest diagnostics, and performance work for drivers who expect more from their cars.</p>
           <div className="hero-actions">
-            <a className="button button-primary" href="https://wa.me/2347047458909" target="_blank" rel="noreferrer">Book a service <span>↗</span></a>
-            <a className="text-link" href="#services">See what we do <span>↓</span></a>
+            <a className="button button-primary" href="/auth/services" target="_blank" rel="noreferrer">Book a service </a>
+            <a className="text-link" href="#services">See what we do </a>
           </div>
           <div className="hero-meta">
             <div><strong>01</strong><span>Performance-led<br />technical care</span></div>
@@ -52,11 +53,11 @@ export default function Home() {
           <a className="text-link" href="/auth/services">View all services <span>↗</span></a>
         </div>
         <div className="service-list">
-          {services.map(([number, title, description]) => (
+          {services.map(([number, title, description, Icon]) => (
             <article className="service-item" key={title}>
               <span className="service-number">{number}</span>
               <div><h3>{title}</h3><p>{description}</p></div>
-              <span className="service-arrow">↗</span>
+              <Icon className="service-icon" aria-hidden="true" />
             </article>
           ))}
         </div>
@@ -102,7 +103,7 @@ export default function Home() {
           <p className="eyebrow"><span /> Start with certainty</p>
           <h2>Know what&apos;s<br /><em>under the hood.</em></h2>
           <p>Small service, big peace of mind. We scan, inspect, and explain what your car needs next, before a warning light becomes a roadside story.</p>
-          <a className="button button-light" href="https://wa.me/2347047458909" target="_blank" rel="noreferrer">Talk to the team <span>↗</span></a>
+          <a className="button button-light" href="/auth/services" target="_blank" rel="noreferrer">Talk to the team</a>
         </div>
       </section>
 

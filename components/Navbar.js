@@ -34,7 +34,7 @@ export function Navbar() {
             <br />
             <b>REDLINE</b>
             <br />
-            <i className="text-xm">performance</i>
+            <small>performance</small>
           </span>
         </Link>
 

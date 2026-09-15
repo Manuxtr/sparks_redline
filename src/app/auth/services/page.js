@@ -8,11 +8,16 @@ import * as Yup from "yup";
 import { Alert, Button, MenuItem, TextField } from "@mui/material";
 
 const serviceOptions = [
-    "Deep diagnostics",
-    "Performance tuning",
-    "Engine and transmission",
-    "Suspension and exhaust",
-    "Oil change and routine service",
+    "Engine Overhaul",
+    "ECU Tuning",
+    "Deep Diagnostics",
+    "Suspension Repair",
+    "Suspension Upgrades",
+    "Custom Exhaust",
+    "Transmission Repair",
+    "Turbo Installation",
+    "Home Service",
+    "Routine Services",
 ];
 
 const fieldSx = {
@@ -90,7 +95,7 @@ export default function Services() {
             <section className="appointment-section shell">
                 <div className="appointment-heading">
                     <p className="eyebrow"><span /> Appointment details</p>
-                    <h2>Make a<br /><em>request.</em></h2>
+                    <h2>Book an<br /> <em>Appointment.</em></h2>
                     <p>Appointments are confirmed by our team. For urgent issues, call or WhatsApp us directly.</p>
                     <a className="text-link" href="tel:07047458909">Call 0704 745 8909 <span>↗</span></a>
                 </div>
