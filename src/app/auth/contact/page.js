@@ -38,7 +38,7 @@ export default function Contact() {
                     ))}
                     <Paper className="contact-card contact-hours" elevation={0}>
                         <AccessTime className="contact-card-icon" />
-                        <div><small>Workshop hours</small><p>Monday - Saturday<br /><strong>8:00 AM - 6:00 PM</strong></p><p>Sunday<br /><strong>By appointment</strong></p></div>
+                        <div><small>Workshop hourss</small><p>Monday - Saturday<br /><strong>8:00 AM - 6:00 PM</strong></p><p>Sunday<br /><strong>By appointment</strong></p></div>
                     </Paper>
                 </div>
             </section>
