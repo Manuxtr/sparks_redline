@@ -121,7 +121,7 @@ export default function Services() {
 
                     <div className="form-submit">
                         <p>We&apos;ll review your request and get back to you with availability.</p>
-                        <Button type="submit" variant="contained">Request appointment <span>↗</span></Button>
+                        <Button type="submit" variant="contained">Book appointment </Button>
                     </div>
                 </form>
             </section>
