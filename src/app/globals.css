@@ -117,6 +117,8 @@ h1, h2 { font-size: clamp(50px, 7vw, 94px); letter-spacing: -.06em; line-height:
 .appointment-alert { background: #1f2a22 !important; border: 1px solid #3b7048; color: #d3f1d7 !important; margin-bottom: 25px; }
 .appointment-alert .MuiAlert-icon { color: #7dcc89; }
 .form-grid { display: grid; gap: 22px 18px; grid-template-columns: 1fr 1fr; }
+.form-grid > .MuiFormControl-root { min-width: 0; width: 100%; }
+.form-grid .MuiOutlinedInput-root { width: 100%; }
 .form-grid .MuiInputBase-input[type="date"], .form-grid .MuiInputBase-input[type="time"] { color-scheme: dark; }
 .form-grid .MuiSelect-icon { color: #85827c; }
 .form-grid .MuiMenuItem-root { background: #171716; color: var(--paper); }
